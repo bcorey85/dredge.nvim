@@ -3,8 +3,8 @@
 -- Reads plain fg. Calls teal (decorators and constructors are calls). Writes orange:
 -- a store into something that already exists. Exits magenta: return, raise, break, continue.
 -- Literals olive, strings included. Keywords grey, types blue. Comments yellow.
--- The hues are solarized-osaka's. Dark ground is slate (OKLCH L 0.205, h 225, C 0.030),
--- midway between charcoal and osaka's navy. Punctuation and line numbers are greys.
+-- The hues are solarized-osaka's. Dark ground is slate (OKLCH L 0.190, h 225, C 0.030),
+-- a step above osaka's navy. Punctuation and line numbers are greys.
 -- Warnings take an amber, clear of the orange writes and the yellow comments.
 -- No italics: hunk can't render them, and the two must match.
 -- Diffs take osaka's washes: teal add, deep-red remove. Signs (added, removed,
@@ -18,10 +18,10 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#061a21",
-  bg_dark = "#01131a",
-  bg_line = "#13272f",
-  bg_cursor = "#0c2028",
+  bg = "#03171e",
+  bg_dark = "#001016",
+  bg_line = "#0f232b",
+  bg_cursor = "#081c24",
   bg_sel = "#1e323a",
   bg_visual = "#243841",
   border = "#2a3e47",
@@ -64,7 +64,7 @@ palettes.dark = {
   search = "#5b4032",
 
   term = {
-    "#01131a", "#f76c66", "#5cbd6e", "#ccb03f", "#36aff6", "#fc61a5", "#46b8ae", "#d7dfe9",
+    "#001016", "#f76c66", "#5cbd6e", "#ccb03f", "#36aff6", "#fc61a5", "#46b8ae", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#ebf2fd",
   },
 }
