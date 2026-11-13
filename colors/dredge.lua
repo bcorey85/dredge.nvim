@@ -3,7 +3,7 @@
 -- Reads plain fg. Calls teal (decorators and constructors are calls). Writes orange:
 -- a store into something that already exists. Exits magenta: return, raise, break, continue.
 -- Literals olive, strings included. Keywords grey, types blue. Comments yellow.
--- Inspired by solarized-osaka, flexoki and papercolor. Dark ground is graphite (OKLCH L 0.190,
+-- Inspired by solarized-osaka, flexoki and papercolor. Dark ground is graphite (OKLCH L 0.210,
 -- h 240, C 0.008). Punctuation and line numbers are greys.
 -- Warnings take an amber, clear of the orange writes and the yellow comments.
 -- No italics: hunk can't render them, and the two must match.
@@ -18,14 +18,14 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#111517",
-  bg_dark = "#0a0e10",
-  bg_line = "#1d2123",
-  bg_cursor = "#161a1d",
-  bg_sel = "#2b2f32",
-  bg_visual = "#313539",
-  border = "#373b3f",
-  nontext = "#3c4043",
+  bg = "#15191c",
+  bg_dark = "#0e1215",
+  bg_line = "#212528",
+  bg_cursor = "#1b1e21",
+  bg_sel = "#303438",
+  bg_visual = "#363b3e",
+  border = "#3c4144",
+  nontext = "#414549",
   linenr = "#8c9097",
   muted = "#b1b5bc",
   comment = "#bec3cb",
@@ -57,14 +57,14 @@ palettes.dark = {
   removed = "#f54b43",
   changed = "#b9a466",
   diff_add = "#142d2e",
-  diff_delete = "#290e1c",
+  diff_delete = "#2e1321",
   diff_change = "#142d2e",
   diff_text = "#173f3e",
-  diff_text_delete = "#42132c",
+  diff_text_delete = "#471831",
   search = "#5b4032",
 
   term = {
-    "#0a0e10", "#e16963", "#5daf6b", "#bda547", "#40a3e0", "#e6619a", "#4baba2", "#d7dfe9",
+    "#0e1215", "#e16963", "#5daf6b", "#bda547", "#40a3e0", "#e6619a", "#4baba2", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#ebf2fd",
   },
 }
