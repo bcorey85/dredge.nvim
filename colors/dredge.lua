@@ -525,7 +525,7 @@ end
 local roles = {
   dark = {
     bind = "#8990da", read = "#b6c3cb", act = "#4baba2", write = "#da7e4b",
-    exit = "#e36099", lit = "#8fa338", kw = "#9a9ea5", desc = "#429ace", remark = "#b6954d",
+    exit = "#e36099", lit = "#8fa338", kw = "#9a9ea5", desc = "#429ace", remark = "#c3a15a",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
