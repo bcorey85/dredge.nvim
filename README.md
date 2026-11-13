@@ -15,8 +15,10 @@ A Neovim colorscheme, dark and light, that colours syntax by what a token
 | Keyword | grey    | everything else the language reserves                                    |
 | Comment | yellow  | comments and docstrings                                                  |
 
-The hues are [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim)'s,
-on a slate ground. No italics.
+Inspired by [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim),
+[flexoki](https://github.com/kepano/flexoki) and
+[papercolor](https://github.com/NLKNguyen/papercolor-theme), on a graphite ground.
+No italics.
 
 Pure Lua, no dependencies, no `setup()`.
 

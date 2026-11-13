@@ -3,11 +3,11 @@
 -- Reads plain fg. Calls teal (decorators and constructors are calls). Writes orange:
 -- a store into something that already exists. Exits magenta: return, raise, break, continue.
 -- Literals olive, strings included. Keywords grey, types blue. Comments yellow.
--- The hues are solarized-osaka's. Dark ground is slate (OKLCH L 0.190, h 225, C 0.030),
--- a step above osaka's navy. Punctuation and line numbers are greys.
+-- Inspired by solarized-osaka, flexoki and papercolor. Dark ground is graphite (OKLCH L 0.190,
+-- h 240, C 0.008). Punctuation and line numbers are greys.
 -- Warnings take an amber, clear of the orange writes and the yellow comments.
 -- No italics: hunk can't render them, and the two must match.
--- Diffs take osaka's washes: teal add, deep-red remove. Signs (added, removed,
+-- Diff washes: teal add, magenta remove. Signs (added, removed,
 -- changed) fade toward the ground, 25% dark and 15% light, so the gutter sits under the text.
 -- Teal is the accent; yellow marks changed. The palette below is the source of truth; the
 -- ghostty/herdr/hunk/starship/quickshell/claude-theme copies mirror it by hand.
@@ -18,14 +18,14 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#03171e",
-  bg_dark = "#001016",
-  bg_line = "#0f232b",
-  bg_cursor = "#081c24",
-  bg_sel = "#1e323a",
-  bg_visual = "#243841",
-  border = "#2a3e47",
-  nontext = "#2e434b",
+  bg = "#111517",
+  bg_dark = "#0a0e10",
+  bg_line = "#1d2123",
+  bg_cursor = "#161a1d",
+  bg_sel = "#2b2f32",
+  bg_visual = "#313539",
+  border = "#373b3f",
+  nontext = "#3c4043",
   linenr = "#8c9097",
   muted = "#b1b5bc",
   comment = "#bec3cb",
@@ -33,38 +33,38 @@ palettes.dark = {
   fg = "#b6c3cb",
   fg_bright = "#ebf2fd",
 
-  red = "#f76c66",
-  amber = "#f79732",
-  yellow = "#ccb03f",
-  warn = "#e29a30",
-  green = "#5cbd6e",
-  teal = "#46b8ae",
-  blue = "#36aff6",
-  magenta = "#fc61a5",
+  red = "#e16963",
+  amber = "#e3903d",
+  yellow = "#bda547",
+  warn = "#d0923b",
+  green = "#5daf6b",
+  teal = "#4baba2",
+  blue = "#40a3e0",
+  magenta = "#e6619a",
 
   kw = "#9a9ea5",
-  fn = "#8e96ec",
-  type = "#99af2e",
-  builtin = "#3ba6e2",
-  param = "#ee8448",
-  attr = "#f7665b",
-  preproc = "#f7665b",
-  remark = "#d6ae56",
-  str = "#46b8ae",
-  const = "#fc61a5",
+  fn = "#858dd8",
+  type = "#8fa338",
+  builtin = "#429ace",
+  param = "#da7e4b",
+  attr = "#e1645a",
+  preproc = "#e1645a",
+  remark = "#c7a459",
+  str = "#4baba2",
+  const = "#e6619a",
 
-  added = "#46b8ae",
+  added = "#4baba2",
   removed = "#f54b43",
-  changed = "#c7af66",
+  changed = "#b9a466",
   diff_add = "#142d2e",
-  diff_delete = "#2c0e0d",
+  diff_delete = "#290e1c",
   diff_change = "#142d2e",
   diff_text = "#173f3e",
-  diff_text_delete = "#461312",
+  diff_text_delete = "#42132c",
   search = "#5b4032",
 
   term = {
-    "#001016", "#f76c66", "#5cbd6e", "#ccb03f", "#36aff6", "#fc61a5", "#46b8ae", "#d7dfe9",
+    "#0a0e10", "#e16963", "#5daf6b", "#bda547", "#40a3e0", "#e6619a", "#4baba2", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#ebf2fd",
   },
 }
@@ -524,8 +524,8 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#9299ee", read = "#b6c3cb", act = "#46b8ae", write = "#ee8448",
-    exit = "#f861a4", lit = "#99af2e", kw = "#9a9ea5", desc = "#3ba6e2", remark = "#c59f49",
+    bind = "#8990da", read = "#b6c3cb", act = "#4baba2", write = "#da7e4b",
+    exit = "#e36099", lit = "#8fa338", kw = "#9a9ea5", desc = "#429ace", remark = "#b6954d",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
