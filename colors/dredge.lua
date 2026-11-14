@@ -30,7 +30,7 @@ palettes.dark = {
   muted = "#a5a9b0",
   comment = "#bec3cb",
   punct = "#91969c",
-  fg = "#b7bbbd",
+  fg = "#b2bcc5",
   fg_bright = "#d9e0eb",
 
   red = "#d8716a",
@@ -524,7 +524,7 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#8990da", read = "#b7bbbd", act = "#4baba2", write = "#da7e4b",
+    bind = "#8990da", read = "#b2bcc5", act = "#4baba2", write = "#da7e4b",
     exit = "#d6708c", lit = "#8fa338", kw = "#8a9aaa", desc = "#429ace", remark = "#c3a15a",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
