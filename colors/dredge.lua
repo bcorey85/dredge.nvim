@@ -57,10 +57,10 @@ palettes.dark = {
   removed = "#d5619e",
   changed = "#b9a466",
   diff_add = "#1b3435",
-  diff_delete = "#351927",
+  diff_delete = "#36222b",
   diff_change = "#1b3435",
   diff_text = "#1e4645",
-  diff_text_delete = "#4f1f38",
+  diff_text_delete = "#4f2d3d",
   search = "#5b4032",
 
   term = {
