@@ -54,7 +54,7 @@ palettes.dark = {
   const = "#f38ba5",
 
   added = "#5ab9b0",
-  removed = "#d5619e",
+  removed = "#f27bb8",
   changed = "#b9a466",
   diff_add = "#1b3435",
   diff_delete = "#36222b",
@@ -65,7 +65,7 @@ palettes.dark = {
 
   term = {
     "#12181e", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#f38ba5", "#5ab9b0", "#d7dfe9",
-    "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d9e0eb",
+    "#9599a0", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d9e0eb",
   },
 }
 
@@ -524,8 +524,8 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#8990da", read = "#b7c5d2", act = "#5ab9b0", write = "#f0925f",
-    exit = "#d6708c", lit = "#9eb34a", kw = "#95a5b5", desc = "#5bb2e7", remark = "#c3a15a",
+    bind = "#9ca4f1", read = "#b7c5d2", act = "#5ab9b0", write = "#f0925f",
+    exit = "#f38ba5", lit = "#9eb34a", kw = "#95a5b5", desc = "#5bb2e7", remark = "#c9a65a",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
