@@ -84,7 +84,7 @@ palettes.light = {
   muted = "#4e5158",
   comment = "#3e4148",
   punct = "#575b62",
-  fg = "#293741",
+  fg = "#1f2d37",
   fg_bright = "#131820",
 
   red = "#b0423f",
@@ -92,20 +92,20 @@ palettes.light = {
   yellow = "#846322",
   warn = "#7a4400",
   green = "#317a46",
-  teal = "#00625c",
+  teal = "#005751",
   blue = "#296caa",
-  magenta = "#a80e62",
+  magenta = "#940053",
 
   kw = "#4c5158",
-  fn = "#4b47b6",
-  type = "#4f5d00",
-  builtin = "#005b91",
-  param = "#943b12",
-  attr = "#a32822",
-  preproc = "#a32822",
+  fn = "#413aa8",
+  type = "#445200",
+  builtin = "#004f85",
+  param = "#872f00",
+  attr = "#951816",
+  preproc = "#951816",
   remark = "#6d4a00",
-  str = "#00625c",
-  const = "#a80e62",
+  str = "#005751",
+  const = "#940053",
 
   added = "#006f67",
   removed = "#b32474",
@@ -530,7 +530,7 @@ local roles = {
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
   light = {
-    bind = "#433fa8", read = "#293741", act = "#006c66", write = "#992406",
+    bind = "#433fa8", read = "#1f2d37", act = "#006c66", write = "#992406",
     exit = "#a80e62", lit = "#2a7000", kw = "#4c5158", desc = "#07549f", remark = "#6d4a00",
   },
 }
