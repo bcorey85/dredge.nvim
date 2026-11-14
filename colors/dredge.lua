@@ -56,11 +56,11 @@ palettes.dark = {
   added = "#4baba2",
   removed = "#f54b43",
   changed = "#b9a466",
-  diff_add = "#142d2e",
-  diff_delete = "#2e1321",
-  diff_change = "#142d2e",
-  diff_text = "#173f3e",
-  diff_text_delete = "#471831",
+  diff_add = "#1b3435",
+  diff_delete = "#351927",
+  diff_change = "#1b3435",
+  diff_text = "#1e4645",
+  diff_text_delete = "#4f1f38",
   search = "#5b4032",
 
   term = {
