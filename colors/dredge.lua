@@ -18,14 +18,14 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#15191c",
-  bg_dark = "#0e1215",
-  bg_line = "#212528",
-  bg_cursor = "#1b1e21",
-  bg_sel = "#303438",
-  bg_visual = "#363b3e",
-  border = "#3c4144",
-  nontext = "#414549",
+  bg = "#1b1f23",
+  bg_dark = "#14181b",
+  bg_line = "#282c2f",
+  bg_cursor = "#212427",
+  bg_sel = "#373b3f",
+  bg_visual = "#3d4245",
+  border = "#43484b",
+  nontext = "#484c50",
   linenr = "#8c9097",
   muted = "#a5a9b0",
   comment = "#bec3cb",
@@ -33,25 +33,25 @@ palettes.dark = {
   fg = "#b7bbbd",
   fg_bright = "#ebf2fd",
 
-  red = "#e16963",
-  amber = "#e3903d",
+  red = "#d8716a",
+  amber = "#e09247",
   yellow = "#bda547",
   warn = "#d0923b",
   green = "#5daf6b",
   teal = "#4baba2",
   blue = "#40a3e0",
-  magenta = "#e6619a",
+  magenta = "#d57299",
 
   kw = "#8a9aaa",
   fn = "#858dd8",
   type = "#8fa338",
   builtin = "#429ace",
   param = "#da7e4b",
-  attr = "#e1645a",
-  preproc = "#e1645a",
+  attr = "#d46e65",
+  preproc = "#d46e65",
   remark = "#c7a459",
   str = "#4baba2",
-  const = "#e6619a",
+  const = "#d57299",
 
   added = "#4baba2",
   removed = "#f54b43",
@@ -64,7 +64,7 @@ palettes.dark = {
   search = "#5b4032",
 
   term = {
-    "#0e1215", "#e16963", "#5daf6b", "#bda547", "#40a3e0", "#e6619a", "#4baba2", "#d7dfe9",
+    "#14181b", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d57299", "#4baba2", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#ebf2fd",
   },
 }
@@ -525,7 +525,7 @@ end
 local roles = {
   dark = {
     bind = "#8990da", read = "#b7bbbd", act = "#4baba2", write = "#da7e4b",
-    exit = "#e36099", lit = "#8fa338", kw = "#8a9aaa", desc = "#429ace", remark = "#c3a15a",
+    exit = "#d27198", lit = "#8fa338", kw = "#8a9aaa", desc = "#429ace", remark = "#c3a15a",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
