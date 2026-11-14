@@ -26,11 +26,11 @@ palettes.dark = {
   bg_visual = "#3b4249",
   border = "#41484f",
   nontext = "#454c53",
-  linenr = "#8c9097",
+  linenr = "#9599a0",
   muted = "#a5a9b0",
   comment = "#bec3cb",
-  punct = "#91969c",
-  fg = "#aebcc9",
+  punct = "#989ea4",
+  fg = "#b7c5d2",
   fg_bright = "#d9e0eb",
 
   red = "#d8716a",
@@ -38,22 +38,22 @@ palettes.dark = {
   yellow = "#bda547",
   warn = "#d0923b",
   green = "#5daf6b",
-  teal = "#4baba2",
+  teal = "#5ab9b0",
   blue = "#40a3e0",
-  magenta = "#d8728d",
+  magenta = "#f38ba5",
 
-  kw = "#8a9aaa",
-  fn = "#858dd8",
-  type = "#8fa338",
-  builtin = "#429ace",
-  param = "#da7e4b",
-  attr = "#d46e65",
-  preproc = "#d46e65",
-  remark = "#c7a459",
-  str = "#4baba2",
-  const = "#d8728d",
+  kw = "#95a5b5",
+  fn = "#9ca4f1",
+  type = "#9eb34a",
+  builtin = "#5bb2e7",
+  param = "#f0925f",
+  attr = "#f78d83",
+  preproc = "#f78d83",
+  remark = "#c9a65a",
+  str = "#5ab9b0",
+  const = "#f38ba5",
 
-  added = "#4baba2",
+  added = "#5ab9b0",
   removed = "#d5619e",
   changed = "#b9a466",
   diff_add = "#1b3435",
@@ -64,7 +64,7 @@ palettes.dark = {
   search = "#5b4032",
 
   term = {
-    "#12181e", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d8728d", "#4baba2", "#d7dfe9",
+    "#12181e", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#f38ba5", "#5ab9b0", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d9e0eb",
   },
 }
@@ -524,8 +524,8 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#8990da", read = "#aebcc9", act = "#4baba2", write = "#da7e4b",
-    exit = "#d6708c", lit = "#8fa338", kw = "#8a9aaa", desc = "#429ace", remark = "#c3a15a",
+    bind = "#8990da", read = "#b7c5d2", act = "#5ab9b0", write = "#f0925f",
+    exit = "#d6708c", lit = "#9eb34a", kw = "#95a5b5", desc = "#5bb2e7", remark = "#c3a15a",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
