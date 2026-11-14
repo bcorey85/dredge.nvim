@@ -31,7 +31,7 @@ palettes.dark = {
   comment = "#bec3cb",
   punct = "#91969c",
   fg = "#b7bbbd",
-  fg_bright = "#ebf2fd",
+  fg_bright = "#d9e0eb",
 
   red = "#d8716a",
   amber = "#e09247",
@@ -54,7 +54,7 @@ palettes.dark = {
   const = "#d8728d",
 
   added = "#4baba2",
-  removed = "#f54b43",
+  removed = "#d5619e",
   changed = "#b9a466",
   diff_add = "#173031",
   diff_delete = "#311624",
@@ -65,7 +65,7 @@ palettes.dark = {
 
   term = {
     "#111518", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d8728d", "#4baba2", "#d7dfe9",
-    "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#ebf2fd",
+    "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d9e0eb",
   },
 }
 
