@@ -40,7 +40,7 @@ palettes.dark = {
   green = "#5daf6b",
   teal = "#4baba2",
   blue = "#40a3e0",
-  magenta = "#d57299",
+  magenta = "#d8728d",
 
   kw = "#8a9aaa",
   fn = "#858dd8",
@@ -51,7 +51,7 @@ palettes.dark = {
   preproc = "#d46e65",
   remark = "#c7a459",
   str = "#4baba2",
-  const = "#d57299",
+  const = "#d8728d",
 
   added = "#4baba2",
   removed = "#f54b43",
@@ -64,7 +64,7 @@ palettes.dark = {
   search = "#5b4032",
 
   term = {
-    "#111518", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d57299", "#4baba2", "#d7dfe9",
+    "#111518", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d8728d", "#4baba2", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#ebf2fd",
   },
 }
@@ -525,7 +525,7 @@ end
 local roles = {
   dark = {
     bind = "#8990da", read = "#b7bbbd", act = "#4baba2", write = "#da7e4b",
-    exit = "#d27198", lit = "#8fa338", kw = "#8a9aaa", desc = "#429ace", remark = "#c3a15a",
+    exit = "#d6708c", lit = "#8fa338", kw = "#8a9aaa", desc = "#429ace", remark = "#c3a15a",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
