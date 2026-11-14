@@ -18,14 +18,14 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#1b1f23",
-  bg_dark = "#14181b",
-  bg_line = "#282c2f",
-  bg_cursor = "#212427",
-  bg_sel = "#373b3f",
-  bg_visual = "#3d4245",
-  border = "#43484b",
-  nontext = "#484c50",
+  bg = "#191f25",
+  bg_dark = "#12181e",
+  bg_line = "#262c33",
+  bg_cursor = "#1e242b",
+  bg_sel = "#353b42",
+  bg_visual = "#3b4249",
+  border = "#41484f",
+  nontext = "#454c53",
   linenr = "#8c9097",
   muted = "#a5a9b0",
   comment = "#bec3cb",
@@ -64,7 +64,7 @@ palettes.dark = {
   search = "#5b4032",
 
   term = {
-    "#14181b", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d8728d", "#4baba2", "#d7dfe9",
+    "#12181e", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d8728d", "#4baba2", "#d7dfe9",
     "#8c9096", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d9e0eb",
   },
 }
