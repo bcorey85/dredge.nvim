@@ -49,7 +49,7 @@ palettes.dark = {
   param = "#f0925f",
   attr = "#f78d83",
   preproc = "#f78d83",
-  remark = "#c9a65a",
+  remark = "#c5a769",
   str = "#5ab9b0",
   const = "#f38ba5",
 
@@ -525,7 +525,7 @@ end
 local roles = {
   dark = {
     bind = "#9ca4f1", read = "#c1cfdc", act = "#5ab9b0", write = "#f0925f",
-    exit = "#f38ba5", lit = "#9eb34a", kw = "#95a5b5", desc = "#5bb2e7", remark = "#c9a65a",
+    exit = "#f38ba5", lit = "#9eb34a", kw = "#95a5b5", desc = "#5bb2e7", remark = "#c5a769",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
