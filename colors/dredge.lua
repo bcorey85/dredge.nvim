@@ -1,10 +1,10 @@
--- dredge — dark and light, with syntax coloured by what a token does, not what it is.
--- Binds violet: any name where it is introduced (function, class, variable, parameter, key).
--- Reads plain fg. Calls teal (decorators and constructors are calls). Writes orange:
--- a store into something that already exists. Exits magenta: return, raise, break, continue.
--- Literals olive, strings included. Keywords grey, types blue. Comments yellow.
--- Inspired by solarized-osaka, flexoki and papercolor. Dark ground, text and greys are
--- neutral (#1c1c1c ground). Punctuation and line numbers are greys.
+-- dredge — dark and light: structure is coloured, names stay plain.
+-- Names plain fg: variables, functions, calls, members. Declaring keywords violet
+-- (function, local, class, import, modifiers). Flow keywords and types blue.
+-- Operators and brackets teal. Writes orange: a store into something that already exists.
+-- Exits magenta: return, raise, break, continue. Literals olive, strings included.
+-- Comments yellow. Inspired by solarized-osaka, flexoki and papercolor. Dark ground,
+-- text and greys are neutral (#1c1c1c ground). Line numbers are grey.
 -- Warnings take an amber, clear of the orange writes and the yellow comments.
 -- No italics: hunk can't render them, and the two must match.
 -- Diff washes: teal add, magenta remove. Signs (added, removed,
@@ -276,7 +276,6 @@ local groups = {
   ["@declaration.local"] = {},
   ["@variable.write"] = {},
   ["@keyword.exit"] = { fg = c.kw },
-  -- Violet marks functions only.
   ["@declaration.function"] = { fg = c.fn },
   ["@number"] = { fg = c.const },
   ["@boolean"] = { fg = c.const },
@@ -524,54 +523,54 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#8b92d6", read = "#c0c0c0", act = "#51a49c", write = "#d68356",
-    exit = "#d97d94", lit = "#8d9f43", kw = "#949494", desc = "#529ecd", remark = "#af955f",
+    declare = "#8b92d6", read = "#c0c0c0", punct = "#51a49c", write = "#d68356",
+    exit = "#d97d94", lit = "#8d9f43", desc = "#529ecd", remark = "#af955f",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
   light = {
-    bind = "#433fa8", read = "#1f2d37", act = "#006c66", write = "#992406",
-    exit = "#a80e62", lit = "#2a7000", kw = "#4c5158", desc = "#07549f", remark = "#6d4a00",
+    declare = "#433fa8", read = "#1f2d37", punct = "#006c66", write = "#992406",
+    exit = "#a80e62", lit = "#2a7000", desc = "#07549f", remark = "#6d4a00",
   },
 }
 local role = roles[mode]
 
 local by_role = {
-  bind = {
-    "Function", "@function", "@function.method",
-    "@declaration.function", "@declaration.class", "@declaration.type",
-    "@declaration.variable", "@declaration.local",
-    "@variable.parameter", "@variable.member.key", "@variable.member.attr",
-    "@type.definition", "@type.definition.python",
-    "@lsp.mod.declaration", "@lsp.mod.definition",
+  declare = {
+    "Keyword", "PreProc", "Macro", "Define", "PreCondit", "StorageClass", "Include",
+    "@keyword", "@keyword.function", "@keyword.operator", "@keyword.import",
+    "@keyword.coroutine", "@keyword.directive", "@keyword.modifier", "@keyword.type",
+    "Tag", "@tag", "@tag.builtin",
   },
   read = {
     "Identifier", "@variable", "@variable.builtin", "@variable.kwarg",
-    "@variable.parameter.bash", "@module", "@module.builtin", "@constant", "@constant.macro",
-    "@type.sql",
+    "@variable.parameter", "@variable.parameter.bash", "@module", "@module.builtin",
+    "@constant", "@constant.macro", "@type.sql",
+    "@property", "@variable.member", "@variable.member.key", "@variable.member.attr",
+    "Function", "@function", "@function.method", "@function.call", "@function.method.call",
+    "@function.builtin", "@function.macro", "@constructor", "@attribute",
+    "@declaration.function", "@declaration.class", "@declaration.type",
+    "@declaration.variable", "@declaration.local",
+    "@lsp.mod.declaration", "@lsp.mod.definition",
   },
-  act = {
-    "Macro", "@function.call", "@function.method.call", "@function.builtin",
-    "@function.macro", "@constructor", "@attribute", "PreProc",
+  punct = {
+    "Operator", "Delimiter", "@operator", "@punctuation.delimiter", "@punctuation.bracket",
+    "@punctuation.special", "@tag.delimiter",
   },
   write = { "@variable.write", "@lsp.mod.mutable" },
   exit = { "@keyword.return", "@keyword.exit" },
-  kw = {
-    "Statement", "Conditional", "Repeat", "Label", "Keyword", "Exception", "Include",
-    "Define", "PreCondit", "StorageClass", "@label",
-    "@keyword", "@keyword.function", "@keyword.operator", "@keyword.import",
-    "@keyword.exception", "@keyword.conditional", "@keyword.repeat", "@keyword.coroutine",
-    "@keyword.directive", "@keyword.modifier", "@keyword.type",
-  },
   lit = {
     "String", "@string", "@string.special", "@string.plain", "@string.special.symbol",
     "Character", "Number", "Boolean", "Float", "Constant", "Special", "SpecialChar",
     "@string.escape", "@string.regexp", "@character", "@number", "@boolean", "@constant.builtin",
-    "@constant.regex", "@variable.builtin.regex", "@property.regex",
+    "@constant.regex", "@variable.builtin.regex", "@property.regex", "@tag.attribute",
   },
   remark = { "Comment", "SpecialComment", "@comment", "@string.documentation" },
   desc = {
+    "Statement", "Conditional", "Repeat", "Label", "Exception", "@label",
+    "@keyword.conditional", "@keyword.repeat", "@keyword.exception",
     "Type", "Structure", "Typedef", "@type", "@type.builtin", "@type.python",
+    "@type.definition", "@type.definition.python",
   },
 }
 
