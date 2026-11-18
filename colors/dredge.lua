@@ -38,22 +38,22 @@ palettes.dark = {
   yellow = "#bda547",
   warn = "#d0923b",
   green = "#5daf6b",
-  teal = "#5ab9b0",
+  teal = "#51a49c",
   blue = "#40a3e0",
-  magenta = "#f38ba5",
+  magenta = "#d97d94",
 
   kw = "#949494",
-  fn = "#9ca4f1",
-  type = "#9eb34a",
-  builtin = "#5bb2e7",
-  param = "#f0925f",
-  attr = "#f78d83",
-  preproc = "#f78d83",
-  remark = "#c5a769",
-  str = "#5ab9b0",
-  const = "#f38ba5",
+  fn = "#8b92d6",
+  type = "#8d9f43",
+  builtin = "#529ecd",
+  param = "#d68356",
+  attr = "#dc7f76",
+  preproc = "#dc7f76",
+  remark = "#af955f",
+  str = "#51a49c",
+  const = "#d97d94",
 
-  added = "#5ab9b0",
+  added = "#51a49c",
   removed = "#d887ae",
   changed = "#b9a466",
   diff_add = "#1d2724",
@@ -64,7 +64,7 @@ palettes.dark = {
   search = "#5b4032",
 
   term = {
-    "#161616", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#f38ba5", "#5ab9b0", "#c0c0c0",
+    "#161616", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#c0c0c0",
     "#949494", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d1d1d1",
   },
 }
@@ -524,8 +524,8 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#9ca4f1", read = "#c0c0c0", act = "#5ab9b0", write = "#f0925f",
-    exit = "#f38ba5", lit = "#9eb34a", kw = "#949494", desc = "#5bb2e7", remark = "#c5a769",
+    bind = "#8b92d6", read = "#c0c0c0", act = "#51a49c", write = "#d68356",
+    exit = "#d97d94", lit = "#8d9f43", kw = "#949494", desc = "#529ecd", remark = "#af955f",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
