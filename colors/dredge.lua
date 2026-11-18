@@ -1,7 +1,7 @@
 -- dredge — dark and light: structure is coloured, names stay plain.
 -- Names plain fg: variables, functions, calls, members. Declaring keywords violet
--- (function, local, class, import, modifiers). Flow keywords and types blue.
--- Operators and brackets teal. Writes orange: a store into something that already exists.
+-- (function, local, class, import, modifiers). Flow keywords and types teal.
+-- Operators and brackets grey. Writes orange: a store into something that already exists.
 -- Exits magenta: return, raise, break, continue. Literals olive, strings included.
 -- Comments yellow. Inspired by solarized-osaka, flexoki and papercolor. Dark ground,
 -- text and greys are neutral (#1c1c1c ground). Line numbers are grey.
@@ -523,14 +523,14 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    declare = "#8b92d6", read = "#c0c0c0", punct = "#51a49c", write = "#d68356",
-    exit = "#d97d94", lit = "#8d9f43", desc = "#529ecd", remark = "#af955f",
+    declare = "#8b92d6", read = "#c0c0c0", punct = "#949494", write = "#d68356",
+    exit = "#d97d94", lit = "#8d9f43", desc = "#51a49c", remark = "#af955f",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
   light = {
-    declare = "#433fa8", read = "#1f2d37", punct = "#006c66", write = "#992406",
-    exit = "#a80e62", lit = "#2a7000", desc = "#07549f", remark = "#6d4a00",
+    declare = "#433fa8", read = "#1f2d37", punct = "#4c5158", write = "#992406",
+    exit = "#a80e62", lit = "#2a7000", desc = "#006c66", remark = "#6d4a00",
   },
 }
 local role = roles[mode]

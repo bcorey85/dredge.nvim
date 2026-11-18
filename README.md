@@ -7,8 +7,8 @@ and leaves the names plain.
 | --------- | ------- | -------------------------------------------------------------- |
 | Name      | plain   | variables, functions, calls, members, parameters               |
 | Declare   | violet  | `function`, `local`, `class`, `import`, modifiers, markup tags |
-| Flow      | blue    | `if`, `for`, `while`, `try`, and type names                    |
-| Structure | teal    | operators, brackets, delimiters                                |
+| Flow      | teal    | `if`, `for`, `while`, `try`, and type names                    |
+| Structure | grey    | operators, brackets, delimiters                                |
 | Write     | orange  | a store into something that already exists                     |
 | Exit      | magenta | `return`, `raise`, `break`, `continue`                         |
 | Literal   | olive   | strings, numbers, booleans                                     |
