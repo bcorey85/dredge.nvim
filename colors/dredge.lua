@@ -3,8 +3,8 @@
 -- Reads plain fg. Calls teal (decorators and constructors are calls). Writes orange:
 -- a store into something that already exists. Exits magenta: return, raise, break, continue.
 -- Literals olive, strings included. Keywords grey, types blue. Comments yellow.
--- Inspired by solarized-osaka, flexoki and papercolor. Dark ground is graphite (OKLCH L 0.210,
--- h 240, C 0.008). Punctuation and line numbers are greys.
+-- Inspired by solarized-osaka, flexoki and papercolor. Dark ground, text and greys are
+-- neutral (#1c1c1c ground). Punctuation and line numbers are greys.
 -- Warnings take an amber, clear of the orange writes and the yellow comments.
 -- No italics: hunk can't render them, and the two must match.
 -- Diff washes: teal add, magenta remove. Signs (added, removed,
@@ -18,20 +18,20 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#191f25",
-  bg_dark = "#12181e",
-  bg_line = "#262c33",
-  bg_cursor = "#1e242b",
-  bg_sel = "#353b42",
-  bg_visual = "#3b4249",
-  border = "#41484f",
-  nontext = "#454c53",
-  linenr = "#9599a0",
-  muted = "#a5a9b0",
-  comment = "#bec3cb",
-  punct = "#989ea4",
-  fg = "#c1cfdc",
-  fg_bright = "#d9e0eb",
+  bg = "#1c1c1c",
+  bg_dark = "#161616",
+  bg_line = "#292929",
+  bg_cursor = "#222222",
+  bg_sel = "#383838",
+  bg_visual = "#404040",
+  border = "#454545",
+  nontext = "#494949",
+  linenr = "#707070",
+  muted = "#a1a1a1",
+  comment = "#b1b1b1",
+  punct = "#a1a1a1",
+  fg = "#c0c0c0",
+  fg_bright = "#d1d1d1",
 
   red = "#d8716a",
   amber = "#e09247",
@@ -42,7 +42,7 @@ palettes.dark = {
   blue = "#40a3e0",
   magenta = "#f38ba5",
 
-  kw = "#95a5b5",
+  kw = "#949494",
   fn = "#9ca4f1",
   type = "#9eb34a",
   builtin = "#5bb2e7",
@@ -56,16 +56,16 @@ palettes.dark = {
   added = "#5ab9b0",
   removed = "#d887ae",
   changed = "#b9a466",
-  diff_add = "#1a2a2d",
-  diff_delete = "#282128",
-  diff_change = "#1a2a2d",
-  diff_text = "#1e4041",
-  diff_text_delete = "#432834",
+  diff_add = "#1d2724",
+  diff_delete = "#2b1e1f",
+  diff_change = "#1d2724",
+  diff_text = "#213d38",
+  diff_text_delete = "#46252b",
   search = "#5b4032",
 
   term = {
-    "#12181e", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#f38ba5", "#5ab9b0", "#d7dfe9",
-    "#9599a0", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d9e0eb",
+    "#161616", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#f38ba5", "#5ab9b0", "#c0c0c0",
+    "#949494", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d1d1d1",
   },
 }
 
@@ -524,8 +524,8 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    bind = "#9ca4f1", read = "#c1cfdc", act = "#5ab9b0", write = "#f0925f",
-    exit = "#f38ba5", lit = "#9eb34a", kw = "#95a5b5", desc = "#5bb2e7", remark = "#c5a769",
+    bind = "#9ca4f1", read = "#c0c0c0", act = "#5ab9b0", write = "#f0925f",
+    exit = "#f38ba5", lit = "#9eb34a", kw = "#949494", desc = "#5bb2e7", remark = "#c5a769",
   },
   -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
   -- Teal and green sit lighter, at full chroma for their lightness.
