@@ -1,11 +1,9 @@
--- dredge — dark and light: structure is coloured, names stay plain.
--- Names plain fg: variables, functions, calls, members. Declaring keywords violet
--- (function, local, class, import, modifiers). Flow keywords and types teal.
--- Operators and brackets grey. Writes orange: a store into something that already exists.
--- Exits magenta: return, raise, break, continue. Literals olive, strings included.
--- Comments yellow. Inspired by solarized-osaka, flexoki and papercolor. Dark ground,
--- text and greys are neutral (#1c1c1c ground). Line numbers are grey.
--- Warnings take an amber, clear of the orange writes and the yellow comments.
+-- dredge — dark and light: three hues in code, names plain.
+-- Names plain fg: variables, functions, calls, members, writes. Every keyword violet.
+-- Type names teal. Literals olive, strings included. Operators, brackets and comments grey.
+-- Inspired by solarized-osaka, flexoki and papercolor. Dark ground, text and greys are
+-- neutral (#1c1c1c ground). Line numbers are grey.
+-- Warnings take an amber.
 -- No italics: hunk can't render them, and the two must match.
 -- Diff washes: teal add, magenta remove. Signs (added, removed,
 -- changed) fade toward the ground, 25% dark and 15% light, so the gutter sits under the text.
@@ -523,23 +521,24 @@ end
 -- Syntax by role: these groups replace the syntax colours set above.
 local roles = {
   dark = {
-    declare = "#8b92d6", read = "#c0c0c0", punct = "#949494", write = "#d68356",
-    exit = "#d97d94", lit = "#8d9f43", desc = "#51a49c", remark = "#af955f",
+    keyword = "#8b92d6", read = "#c0c0c0", punct = "#949494",
+    lit = "#8d9f43", desc = "#51a49c", remark = "#949494",
   },
-  -- Orange, green and blue sit at the hues where a dark shade keeps the most chroma.
-  -- Teal and green sit lighter, at full chroma for their lightness.
   light = {
-    declare = "#433fa8", read = "#1f2d37", punct = "#4c5158", write = "#992406",
-    exit = "#a80e62", lit = "#2a7000", desc = "#006c66", remark = "#6d4a00",
+    keyword = "#433fa8", read = "#1f2d37", punct = "#4c5158",
+    lit = "#2a7000", desc = "#006c66", remark = "#4c5158",
   },
 }
 local role = roles[mode]
 
 local by_role = {
-  declare = {
+  keyword = {
     "Keyword", "PreProc", "Macro", "Define", "PreCondit", "StorageClass", "Include",
+    "Statement", "Conditional", "Repeat", "Label", "Exception", "@label",
     "@keyword", "@keyword.function", "@keyword.operator", "@keyword.import",
     "@keyword.coroutine", "@keyword.directive", "@keyword.modifier", "@keyword.type",
+    "@keyword.conditional", "@keyword.repeat", "@keyword.exception",
+    "@keyword.return", "@keyword.exit",
     "Tag", "@tag", "@tag.builtin",
   },
   read = {
@@ -551,14 +550,13 @@ local by_role = {
     "@function.builtin", "@function.macro", "@constructor", "@attribute",
     "@declaration.function", "@declaration.class", "@declaration.type",
     "@declaration.variable", "@declaration.local",
+    "@variable.write", "@lsp.mod.mutable",
     "@lsp.mod.declaration", "@lsp.mod.definition",
   },
   punct = {
     "Operator", "Delimiter", "@operator", "@punctuation.delimiter", "@punctuation.bracket",
     "@punctuation.special", "@tag.delimiter",
   },
-  write = { "@variable.write", "@lsp.mod.mutable" },
-  exit = { "@keyword.return", "@keyword.exit" },
   lit = {
     "String", "@string", "@string.special", "@string.plain", "@string.special.symbol",
     "Character", "Number", "Boolean", "Float", "Constant", "Special", "SpecialChar",
@@ -567,8 +565,6 @@ local by_role = {
   },
   remark = { "Comment", "SpecialComment", "@comment", "@string.documentation" },
   desc = {
-    "Statement", "Conditional", "Repeat", "Label", "Exception", "@label",
-    "@keyword.conditional", "@keyword.repeat", "@keyword.exception",
     "Type", "Structure", "Typedef", "@type", "@type.builtin", "@type.python",
     "@type.definition", "@type.definition.python",
   },

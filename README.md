@@ -1,18 +1,16 @@
 # dredge.nvim
 
-A Neovim colorscheme, dark and light, that colours the **structure** of code
-and leaves the names plain.
+A quiet Neovim colorscheme, dark and light: three hues in code, and the names
+stay plain.
 
-| Role      | Colour  | Covers                                                         |
-| --------- | ------- | -------------------------------------------------------------- |
-| Name      | plain   | variables, functions, calls, members, parameters               |
-| Declare   | violet  | `function`, `local`, `class`, `import`, modifiers, markup tags |
-| Flow      | teal    | `if`, `for`, `while`, `try`, and type names                    |
-| Structure | grey    | operators, brackets, delimiters                                |
-| Write     | orange  | a store into something that already exists                     |
-| Exit      | magenta | `return`, `raise`, `break`, `continue`                         |
-| Literal   | olive   | strings, numbers, booleans                                     |
-| Comment   | yellow  | comments and docstrings                                        |
+| Role      | Colour | Covers                                           |
+| --------- | ------ | ------------------------------------------------ |
+| Name      | plain  | variables, functions, calls, members, parameters |
+| Keyword   | violet | every keyword, and markup tags                   |
+| Type      | teal   | type names                                       |
+| Literal   | olive  | strings, numbers, booleans                       |
+| Structure | grey   | operators, brackets, delimiters                  |
+| Comment   | grey   | comments and docstrings                          |
 
 Inspired by [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim),
 [flexoki](https://github.com/kepano/flexoki) and
@@ -39,9 +37,9 @@ colorscheme dredge
 
 ## Tree-sitter queries
 
-Writes and exits are not captures that stock queries make. The plugin
-ships `after/queries/<language>/highlights.scm` files that add them
-(`@variable.write`, `@keyword.exit`, `@declaration.*` and a few more) for bash,
+The plugin ships `after/queries/<language>/highlights.scm` files that add
+role captures stock queries do not make (`@variable.write`, `@keyword.exit`,
+`@declaration.*` and a few more) for bash,
 C#, CSS, JavaScript, Go, Jinja, Python, Rust, SCSS, SQL, TypeScript, Vue and
 YAML. They extend the stock queries, so they stay loaded under any colorscheme;
 one that does not define these groups ignores them.
