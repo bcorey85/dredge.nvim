@@ -1,12 +1,12 @@
 -- dredge — dark and light: three hues in code, names plain.
--- Names plain fg: variables, functions, calls, members, writes. Every keyword violet.
--- Type names teal. Literals olive, strings included. Operators, brackets and comments grey.
+-- Names plain fg: variables, calls, members, writes. Keywords, operators, brackets and
+-- comments grey. Type names teal. Literals mustard, strings and markdown headings included.
+-- Function and class names take pink where they are defined, and nowhere else.
 -- Inspired by solarized-osaka, flexoki and papercolor. Dark ground, text and greys are
--- neutral (#1c1c1c ground). Line numbers are grey.
--- Warnings take an amber.
+-- neutral (#1c1c1c ground); the light ground is cream with warm greys.
+-- Warnings take an amber; the error red leans orange to stay clear of the pink.
 -- No italics: hunk can't render them, and the two must match.
--- Diff washes: teal add, magenta remove. Signs (added, removed,
--- changed) fade toward the ground, 25% dark and 15% light, so the gutter sits under the text.
+-- Diff washes: green add, red remove.
 -- Teal is the accent; yellow marks changed. The palette below is the source of truth; the
 -- ghostty/herdr/hunk/starship/quickshell/claude-theme copies mirror it by hand.
 -- Editing: one value at a time, judged on a real file in nvim and hunk before the
@@ -31,7 +31,7 @@ palettes.dark = {
   fg = "#c0c0c0",
   fg_bright = "#d1d1d1",
 
-  red = "#d8716a",
+  red = "#d15e47",
   amber = "#e09247",
   yellow = "#bda547",
   warn = "#d0923b",
@@ -41,7 +41,7 @@ palettes.dark = {
   magenta = "#d97d94",
 
   kw = "#949494",
-  fn = "#8b92d6",
+  fn = "#c85993",
   type = "#8d9f43",
   builtin = "#529ecd",
   param = "#d68356",
@@ -51,41 +51,40 @@ palettes.dark = {
   str = "#51a49c",
   const = "#d97d94",
 
-  added = "#51a49c",
-  removed = "#d887ae",
+  added = "#5ba768",
+  removed = "#e68485",
   changed = "#b9a466",
-  diff_add = "#1d2724",
-  diff_delete = "#2b1e1f",
-  diff_change = "#1d2724",
-  diff_text = "#213d38",
-  diff_text_delete = "#46252b",
+  diff_add = "#1a2517",
+  diff_delete = "#2f1c1c",
+  diff_change = "#1a2517",
+  diff_text = "#234024",
+  diff_text_delete = "#572729",
   search = "#5b4032",
 
   term = {
-    "#161616", "#d8716a", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#c0c0c0",
+    "#161616", "#d15e47", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#c0c0c0",
     "#949494", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d1d1d1",
   },
 }
 
--- Light: cool grey ground (OKLCH L 0.85, C 0.01, h 224): dark's hue at a third of its
--- chroma, faint enough to leave teal clear.
+-- Light: cream ground; text and greys are warm to match it.
 palettes.light = {
-  bg = "#c8d0d3",
-  bg_dark = "#c2cacd",
-  bg_line = "#bfc7ca",
-  bg_cursor = "#c2cacd",
-  bg_sel = "#b4bcbf",
-  bg_visual = "#a0a2b3",
-  border = "#a5adb0",
-  nontext = "#acb4b7",
-  linenr = "#575b61",
-  muted = "#4e5158",
-  comment = "#3e4148",
-  punct = "#575b62",
-  fg = "#1f2d37",
-  fg_bright = "#131820",
+  bg = "#f2edd8",
+  bg_dark = "#ede7d1",
+  bg_line = "#eae4ce",
+  bg_cursor = "#ede7d1",
+  bg_sel = "#dfd9c1",
+  bg_visual = "#d8c9aa",
+  border = "#cdc8b2",
+  nontext = "#d4ceb8",
+  linenr = "#66635c",
+  muted = "#5b5851",
+  comment = "#504d46",
+  punct = "#5b5851",
+  fg = "#302e27",
+  fg_bright = "#24211b",
 
-  red = "#b0423f",
+  red = "#a8260a",
   amber = "#9e510f",
   yellow = "#846322",
   warn = "#7a4400",
@@ -94,8 +93,8 @@ palettes.light = {
   blue = "#296caa",
   magenta = "#940053",
 
-  kw = "#4c5158",
-  fn = "#413aa8",
+  kw = "#5b5851",
+  fn = "#c52b75",
   type = "#445200",
   builtin = "#004f85",
   param = "#872f00",
@@ -105,26 +104,39 @@ palettes.light = {
   str = "#005751",
   const = "#940053",
 
-  added = "#006f67",
-  removed = "#a24071",
+  added = "#13702f",
+  removed = "#a03e43",
   changed = "#917031",
-  diff_add = "#b9cacb",
-  diff_delete = "#cbc3ca",
-  diff_change = "#b9cacb",
-  diff_text = "#9cbcb9",
-  diff_text_delete = "#c7acb8",
+  diff_add = "#d6eacc",
+  diff_delete = "#f5d5d4",
+  diff_change = "#d6eacc",
+  diff_text = "#b6dead",
+  diff_text_delete = "#f8bcbb",
   search = "#a78773",
 
   -- Bright slots are deeper shades, as in solarized-osaka light: on a light
   -- ground a lighter "bright" colour reads fainter, not louder.
   term = {
-    "#25292f", "#962929", "#0e5e2c", "#6b4b00", "#07538f", "#a0005c", "#005b55", "#4d5158",
-    "#4b4f56", "#860914", "#004c15", "#5b3a00", "#00417d", "#82004b", "#004a44", "#25292f",
+    "#24211b", "#962929", "#0e5e2c", "#6b4b00", "#07538f", "#a0005c", "#005b55", "#5b5851",
+    "#504d46", "#860914", "#004c15", "#5b3a00", "#00417d", "#82004b", "#004a44", "#24211b",
   },
 }
 
 local mode = vim.o.background == "light" and "light" or "dark"
 local c = palettes[mode]
+
+-- Syntax by role: the by_role groups below replace the syntax colours set in `groups`.
+local roles = {
+  dark = {
+    keyword = "#a1a1a1", read = "#c0c0c0", punct = "#949494",
+    lit = "#cd9728", desc = "#2aa298", remark = "#949494", define = "#c85993",
+  },
+  light = {
+    keyword = "#66635c", read = "#302e27", punct = "#5b5851",
+    lit = "#b46e00", desc = "#238682", remark = "#5b5851", define = "#c52b75",
+  },
+}
+local role = roles[mode]
 
 vim.cmd("highlight clear")
 if vim.fn.exists("syntax_on") == 1 then
@@ -184,7 +196,7 @@ local groups = {
   SpecialKey = { fg = c.nontext },
   Conceal = { fg = c.muted },
   Directory = { fg = c.fg, bold = true },
-  Title = { fg = c.fn, bold = true },
+  Title = { fg = role.lit, bold = true },
   ErrorMsg = { fg = c.red },
   WarningMsg = { fg = c.warn },
   MoreMsg = { fg = c.green },
@@ -320,7 +332,7 @@ local groups = {
   ["@markup.italic"] = { italic = true },
   ["@markup.strikethrough"] = { strikethrough = true },
   ["@markup.underline"] = { underline = true },
-  ["@markup.heading"] = { fg = c.fn, bold = true },
+  ["@markup.heading"] = { fg = role.lit, bold = true },
   ["@markup.quote"] = { fg = c.comment },
   ["@markup.math"] = { fg = c.str },
   ["@markup.link"] = { fg = c.fn },
@@ -518,19 +530,6 @@ for i, color in ipairs(c.term) do
   vim.g["terminal_color_" .. (i - 1)] = color
 end
 
--- Syntax by role: these groups replace the syntax colours set above.
-local roles = {
-  dark = {
-    keyword = "#8b92d6", read = "#c0c0c0", punct = "#949494",
-    lit = "#8d9f43", desc = "#51a49c", remark = "#949494",
-  },
-  light = {
-    keyword = "#433fa8", read = "#1f2d37", punct = "#4c5158",
-    lit = "#2a7000", desc = "#006c66", remark = "#4c5158",
-  },
-}
-local role = roles[mode]
-
 local by_role = {
   keyword = {
     "Keyword", "PreProc", "Macro", "Define", "PreCondit", "StorageClass", "Include",
@@ -548,11 +547,11 @@ local by_role = {
     "@property", "@variable.member", "@variable.member.key", "@variable.member.attr",
     "Function", "@function", "@function.method", "@function.call", "@function.method.call",
     "@function.builtin", "@function.macro", "@constructor", "@attribute",
-    "@declaration.function", "@declaration.class", "@declaration.type",
-    "@declaration.variable", "@declaration.local",
+    "@declaration.type", "@declaration.variable", "@declaration.local",
     "@variable.write", "@lsp.mod.mutable",
-    "@lsp.mod.declaration", "@lsp.mod.definition",
+    "@lsp.mod.declaration", "@lsp.mod.definition", "@tag.attribute",
   },
+  define = { "@declaration.function", "@declaration.class" },
   punct = {
     "Operator", "Delimiter", "@operator", "@punctuation.delimiter", "@punctuation.bracket",
     "@punctuation.special", "@tag.delimiter",
@@ -560,13 +559,13 @@ local by_role = {
   lit = {
     "String", "@string", "@string.special", "@string.plain", "@string.special.symbol",
     "Character", "Number", "Boolean", "Float", "Constant", "Special", "SpecialChar",
-    "@string.escape", "@string.regexp", "@character", "@number", "@boolean", "@constant.builtin",
-    "@constant.regex", "@variable.builtin.regex", "@property.regex", "@tag.attribute",
+    "@string.escape", "@string.regexp", "@character", "@number", "@number.float", "@boolean",
+    "@constant.builtin", "@constant.regex", "@variable.builtin.regex", "@property.regex",
   },
   remark = { "Comment", "SpecialComment", "@comment", "@string.documentation" },
   desc = {
     "Type", "Structure", "Typedef", "@type", "@type.builtin", "@type.python",
-    "@type.definition", "@type.definition.python",
+    "@type.definition", "@type.definition.python", "@constant.builtin.type",
   },
 }
 

@@ -12,6 +12,11 @@
 ]
   (#set! priority 101))
 
+; null and undefined in a type position, apart from the values.
+(literal_type
+  [(null) (undefined)] @constant.builtin.type
+  (#set! priority 110))
+
 ; Type names at their definition.
 (interface_declaration
   name: (_) @declaration.type

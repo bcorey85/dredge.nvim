@@ -4,6 +4,11 @@
 (keyword_argument
   name: (identifier) @variable.kwarg)
 
+; None in a type position, apart from the value.
+((none) @constant.builtin.type
+  (#has-ancestor? @constant.builtin.type type)
+  (#set! priority 110))
+
 ; Function and class names at their definition.
 (function_definition
   name: (identifier) @declaration.function
