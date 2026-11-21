@@ -1,12 +1,13 @@
--- dredge — dark and light: three hues in code, names plain.
--- Names plain fg: variables, calls, members, writes. Keywords, operators, brackets and
--- comments grey. Type names teal. Literals mustard, strings and markdown headings included.
--- Function and class names take pink where they are defined, and nowhere else.
--- Inspired by solarized-osaka, flexoki and papercolor. Dark ground, text and greys are
--- neutral (#1c1c1c ground); the light ground is cream with warm greys.
--- Warnings take an amber; the error red leans orange to stay clear of the pink.
+-- dredge — dark and light: a few hues in code, names plain.
+-- Names plain fg: variables, calls, members, writes. Operators, brackets and comments
+-- grey. Type names teal. Literals mustard, strings and markdown headings included.
+-- Function and class names take the definition colour where they are defined, and
+-- nowhere else: green in dark, pink in light. Keywords are red-orange in dark, grey in light.
+-- Inspired by solarized-osaka, flexoki and papercolor. The dark ground is a deep teal
+-- (#0b191c) with blue-grey text and greys; the light ground is cream with warm greys.
+-- Warnings take an amber; the dark error red is a rose, clear of the keyword red-orange.
 -- No italics: hunk can't render them, and the two must match.
--- Diff washes: green add, red remove.
+-- Diff washes: blue add in dark, green add in light, red remove.
 -- Teal is the accent; yellow marks changed. The palette below is the source of truth; the
 -- ghostty/herdr/hunk/starship/quickshell/claude-theme copies mirror it by hand.
 -- Editing: one value at a time, judged on a real file in nvim and hunk before the
@@ -16,22 +17,22 @@
 local palettes = {}
 
 palettes.dark = {
-  bg = "#1c1c1c",
-  bg_dark = "#161616",
-  bg_line = "#292929",
-  bg_cursor = "#222222",
-  bg_sel = "#383838",
-  bg_visual = "#404040",
-  border = "#454545",
-  nontext = "#494949",
-  linenr = "#707070",
-  muted = "#a1a1a1",
-  comment = "#b1b1b1",
-  punct = "#a1a1a1",
-  fg = "#c0c0c0",
-  fg_bright = "#d1d1d1",
+  bg = "#0b191c",
+  bg_dark = "#061416",
+  bg_line = "#18272a",
+  bg_cursor = "#101f22",
+  bg_sel = "#263638",
+  bg_visual = "#2e3e40",
+  border = "#334345",
+  nontext = "#374749",
+  linenr = "#627078",
+  muted = "#858990",
+  comment = "#a8b5bc",
+  punct = "#858990",
+  fg = "#a0adb4",
+  fg_bright = "#c8d5dc",
 
-  red = "#d15e47",
+  red = "#c55865",
   amber = "#e09247",
   yellow = "#bda547",
   warn = "#d0923b",
@@ -40,8 +41,8 @@ palettes.dark = {
   blue = "#40a3e0",
   magenta = "#d97d94",
 
-  kw = "#949494",
-  fn = "#c85993",
+  kw = "#737d84",
+  fn = "#849900",
   type = "#8d9f43",
   builtin = "#529ecd",
   param = "#d68356",
@@ -51,19 +52,19 @@ palettes.dark = {
   str = "#51a49c",
   const = "#d97d94",
 
-  added = "#5ba768",
+  added = "#5a98cb",
   removed = "#e68485",
   changed = "#b9a466",
-  diff_add = "#1a2517",
-  diff_delete = "#2f1c1c",
-  diff_change = "#1a2517",
-  diff_text = "#21351e",
-  diff_text_delete = "#412222",
+  diff_add = "#0d2638",
+  diff_delete = "#2b2026",
+  diff_change = "#0d2638",
+  diff_text = "#123047",
+  diff_text_delete = "#3e252d",
   search = "#4a3d14",
 
   term = {
-    "#161616", "#d15e47", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#c0c0c0",
-    "#949494", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#d1d1d1",
+    "#061416", "#c55865", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#a0adb4",
+    "#737d84", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#c8d5dc",
   },
 }
 
@@ -128,8 +129,8 @@ local c = palettes[mode]
 -- Syntax by role: the by_role groups below replace the syntax colours set in `groups`.
 local roles = {
   dark = {
-    keyword = "#a1a1a1", read = "#c0c0c0", punct = "#949494",
-    lit = "#cd9728", desc = "#2aa298", remark = "#949494", define = "#c85993",
+    keyword = "#bd5f2f", read = "#a0adb4", punct = "#737d84",
+    lit = "#af8931", desc = "#2e9890", remark = "#7d9094", define = "#849900",
   },
   light = {
     keyword = "#66635c", read = "#302e27", punct = "#5b5851",

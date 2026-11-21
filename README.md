@@ -1,22 +1,22 @@
 # dredge.nvim
 
-A quiet Neovim colorscheme, dark and light: three hues in code, and the names
+A quiet Neovim colorscheme, dark and light: a few hues in code, and the names
 stay plain.
 
-| Role       | Colour  | Covers                                      |
-| ---------- | ------- | ------------------------------------------- |
-| Name       | plain   | variables, calls, members, parameters       |
-| Definition | pink    | function and class names where defined      |
-| Type       | teal    | type names                                  |
-| Literal    | mustard | strings, numbers, booleans, markup headings |
-| Keyword    | grey    | every keyword, and markup tags              |
-| Structure  | grey    | operators, brackets, delimiters             |
-| Comment    | grey    | comments and docstrings                     |
+| Role       | Dark       | Light   | Covers                                      |
+| ---------- | ---------- | ------- | ------------------------------------------- |
+| Name       | plain      | plain   | variables, calls, members, parameters       |
+| Definition | green      | pink    | function and class names where defined      |
+| Type       | teal       | teal    | type names                                  |
+| Literal    | mustard    | mustard | strings, numbers, booleans, markup headings |
+| Keyword    | red-orange | grey    | every keyword, and markup tags              |
+| Structure  | grey       | grey    | operators, brackets, delimiters             |
+| Comment    | blue-grey  | grey    | comments and docstrings                     |
 
 Inspired by [solarized-osaka](https://github.com/craftzdog/solarized-osaka.nvim),
 [flexoki](https://github.com/kepano/flexoki) and
-[papercolor](https://github.com/NLKNguyen/papercolor-theme), on a neutral
-graphite ground in dark and a cream ground in light. No italics.
+[papercolor](https://github.com/NLKNguyen/papercolor-theme), on a deep teal
+ground in dark and a cream ground in light. No italics.
 
 Pure Lua, no dependencies, no `setup()`.
 
