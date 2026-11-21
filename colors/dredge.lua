@@ -57,8 +57,8 @@ palettes.dark = {
   diff_add = "#1a2517",
   diff_delete = "#2f1c1c",
   diff_change = "#1a2517",
-  diff_text = "#234024",
-  diff_text_delete = "#572729",
+  diff_text = "#21351e",
+  diff_text_delete = "#412222",
   search = "#5b4032",
 
   term = {
@@ -110,8 +110,8 @@ palettes.light = {
   diff_add = "#d6eacc",
   diff_delete = "#f5d5d4",
   diff_change = "#d6eacc",
-  diff_text = "#b6dead",
-  diff_text_delete = "#f8bcbb",
+  diff_text = "#cae4c0",
+  diff_text_delete = "#f3c7c6",
   search = "#a78773",
 
   -- Bright slots are deeper shades, as in solarized-osaka light: on a light
