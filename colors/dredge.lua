@@ -1,8 +1,9 @@
 -- dredge — dark and light: a few hues in code, names plain.
--- Names plain fg: variables, calls, members, writes. Operators, brackets and comments
--- grey. Type names teal. Literals mustard, strings and markdown headings included.
--- Function and class names take the definition colour where they are defined, and
--- nowhere else: green in dark, pink in light. Keywords are red-orange in dark, grey in light.
+-- Names plain fg: variables, calls, members, writes. Brackets grey, comments blue-grey.
+-- Type names teal. Literals mustard, strings and markdown headings included.
+-- Function and class names take the definition green where they are defined, and
+-- nowhere else. Keywords are red-orange; operators, delimiters and string escapes
+-- share it. Links are violet. TODO tags are bold pink text with no fill.
 -- Inspired by solarized-osaka, flexoki and papercolor. The dark ground is a deep teal
 -- (#0b191c) with blue-grey text and greys; the light ground is cream with warm greys.
 -- Warnings take an amber; the dark error red is a rose, clear of the keyword red-orange.
@@ -85,7 +86,7 @@ palettes.light = {
   fg = "#302e27",
   fg_bright = "#24211b",
 
-  red = "#a8260a",
+  red = "#a6344c",
   amber = "#9e510f",
   yellow = "#846322",
   warn = "#7a4400",
@@ -95,7 +96,7 @@ palettes.light = {
   magenta = "#940053",
 
   kw = "#5b5851",
-  fn = "#c52b75",
+  fn = "#637200",
   type = "#445200",
   builtin = "#004f85",
   param = "#872f00",
@@ -129,12 +130,14 @@ local c = palettes[mode]
 -- Syntax by role: the by_role groups below replace the syntax colours set in `groups`.
 local roles = {
   dark = {
-    keyword = "#bd5f2f", read = "#a0adb4", punct = "#737d84",
+    keyword = "#bd5f2f", op = "#bd5f2f", read = "#a0adb4", punct = "#737d84",
     lit = "#af8931", desc = "#2e9890", remark = "#7d9094", define = "#849900",
+    link = "#6c71c4", todo = "#c85993",
   },
   light = {
-    keyword = "#66635c", read = "#302e27", punct = "#5b5851",
-    lit = "#b46e00", desc = "#238682", remark = "#5b5851", define = "#c52b75",
+    keyword = "#aa4600", op = "#aa4600", read = "#302e27", punct = "#5b5851",
+    lit = "#9d7200", desc = "#238682", remark = "#50686e", define = "#637200",
+    link = "#5a5fb4", todo = "#c52b75",
   },
 }
 local role = roles[mode]
@@ -244,7 +247,7 @@ local groups = {
   Debug = { fg = c.red },
   Underlined = { underline = true },
   Error = { fg = c.red },
-  Todo = { fg = c.bg, bg = c.const, bold = true },
+  Todo = { fg = role.todo, bold = true },
 
   -- treesitter
   -- Variables are plain at use and at definition.
@@ -336,9 +339,9 @@ local groups = {
   ["@markup.heading"] = { fg = role.lit, bold = true },
   ["@markup.quote"] = { fg = c.comment },
   ["@markup.math"] = { fg = c.str },
-  ["@markup.link"] = { fg = c.fn },
+  ["@markup.link"] = { fg = role.link },
   ["@markup.link.label"] = { fg = c.fn },
-  ["@markup.link.url"] = { fg = c.fn, underline = true },
+  ["@markup.link.url"] = { fg = role.link, underline = true },
   ["@markup.raw"] = { fg = c.str },
   ["@markup.list"] = { fg = c.punct },
   ["@markup.list.checked"] = { fg = c.green },
@@ -553,14 +556,15 @@ local by_role = {
     "@lsp.mod.declaration", "@lsp.mod.definition", "@tag.attribute",
   },
   define = { "@declaration.function", "@declaration.class" },
-  punct = {
-    "Operator", "Delimiter", "@operator", "@punctuation.delimiter", "@punctuation.bracket",
-    "@punctuation.special", "@tag.delimiter",
+  op = {
+    "Operator", "Delimiter", "@operator", "@punctuation.delimiter",
+    "SpecialChar", "@string.escape",
   },
+  punct = { "@punctuation.bracket", "@punctuation.special", "@tag.delimiter" },
   lit = {
     "String", "@string", "@string.special", "@string.plain", "@string.special.symbol",
-    "Character", "Number", "Boolean", "Float", "Constant", "Special", "SpecialChar",
-    "@string.escape", "@string.regexp", "@character", "@number", "@number.float", "@boolean",
+    "Character", "Number", "Boolean", "Float", "Constant", "Special",
+    "@string.regexp", "@character", "@number", "@number.float", "@boolean",
     "@constant.builtin", "@constant.regex", "@variable.builtin.regex", "@property.regex",
   },
   remark = { "Comment", "SpecialComment", "@comment", "@string.documentation" },
