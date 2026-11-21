@@ -1,14 +1,15 @@
 -- dredge — dark and light: a few hues in code, names plain.
--- Names plain fg: variables, calls, members, writes. Brackets grey, comments blue-grey.
--- Type names teal. Literals mustard, strings and markdown headings included.
--- Function and class names take the definition green where they are defined, and
--- nowhere else. Keywords are red-orange; operators, delimiters and string escapes
--- share it. Links are violet. TODO tags are bold pink text with no fill.
+-- Names plain fg: variables, calls, members, writes. Comments blue-grey. Brackets and
+-- delimiters are a grey that sits behind the text. Type names teal. Literals mustard,
+-- strings and markdown headings included. Function and class names take the
+-- definition blue where they are defined, and nowhere else. Keywords are olive.
+-- Operators and string escapes are wine. Links are violet. TODO tags are bold pink
+-- text with no fill.
 -- Inspired by solarized-osaka, flexoki and papercolor. The dark ground is a deep teal
 -- (#0b191c) with blue-grey text and greys; the light ground is cream with warm greys.
 -- Warnings take an amber; the dark error red is a rose, clear of the keyword red-orange.
 -- No italics: hunk can't render them, and the two must match.
--- Diff washes: blue add in dark, green add in light, red remove.
+-- Diff washes: green add, red remove.
 -- Teal is the accent; yellow marks changed. The palette below is the source of truth; the
 -- ghostty/herdr/hunk/starship/quickshell/claude-theme copies mirror it by hand.
 -- Editing: one value at a time, judged on a real file in nvim and hunk before the
@@ -30,7 +31,7 @@ palettes.dark = {
   muted = "#858990",
   comment = "#a8b5bc",
   punct = "#858990",
-  fg = "#a0adb4",
+  fg = "#96a3aa",
   fg_bright = "#c8d5dc",
 
   red = "#c55865",
@@ -53,18 +54,18 @@ palettes.dark = {
   str = "#51a49c",
   const = "#d97d94",
 
-  added = "#5a98cb",
-  removed = "#e68485",
+  added = "#4d8c5a",
+  removed = "#b9686e",
   changed = "#b9a466",
-  diff_add = "#0d2638",
-  diff_delete = "#2b2026",
-  diff_change = "#0d2638",
-  diff_text = "#123047",
-  diff_text_delete = "#3e252d",
+  diff_add = "#0d241d",
+  diff_delete = "#241d22",
+  diff_change = "#0d241d",
+  diff_text = "#153028",
+  diff_text_delete = "#32272b",
   search = "#4a3d14",
 
   term = {
-    "#061416", "#c55865", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#a0adb4",
+    "#061416", "#c55865", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#96a3aa",
     "#737d84", "#ffc4bd", "#c5fbcf", "#ffe9ad", "#bdeaff", "#ff95c4", "#b0efe8", "#c8d5dc",
   },
 }
@@ -130,13 +131,13 @@ local c = palettes[mode]
 -- Syntax by role: the by_role groups below replace the syntax colours set in `groups`.
 local roles = {
   dark = {
-    keyword = "#bd5f2f", op = "#bd5f2f", read = "#a0adb4", punct = "#737d84",
-    lit = "#af8931", desc = "#2e9890", remark = "#7d9094", define = "#849900",
-    link = "#6c71c4", todo = "#c85993",
+    keyword = "#849831", op = "#8f3d5e", read = "#96a3aa", punct = "#58666d",
+    lit = "#af8931", desc = "#2e9890", remark = "#7d9094", define = "#278bd3",
+    link = "#6c71c4", todo = "#ad6396",
   },
   light = {
-    keyword = "#aa4600", op = "#aa4600", read = "#302e27", punct = "#5b5851",
-    lit = "#9d7200", desc = "#238682", remark = "#50686e", define = "#637200",
+    keyword = "#637200", op = "#8f3d5e", read = "#302e27", punct = "#7b786f",
+    lit = "#9d7200", desc = "#238682", remark = "#50686e", define = "#296caa",
     link = "#5a5fb4", todo = "#c52b75",
   },
 }
@@ -556,11 +557,11 @@ local by_role = {
     "@lsp.mod.declaration", "@lsp.mod.definition", "@tag.attribute",
   },
   define = { "@declaration.function", "@declaration.class" },
-  op = {
-    "Operator", "Delimiter", "@operator", "@punctuation.delimiter",
-    "SpecialChar", "@string.escape",
+  op = { "Operator", "@operator", "SpecialChar", "@string.escape" },
+  punct = {
+    "Delimiter", "@punctuation.delimiter",
+    "@punctuation.bracket", "@punctuation.special", "@tag.delimiter",
   },
-  punct = { "@punctuation.bracket", "@punctuation.special", "@tag.delimiter" },
   lit = {
     "String", "@string", "@string.special", "@string.plain", "@string.special.symbol",
     "Character", "Number", "Boolean", "Float", "Constant", "Special",
