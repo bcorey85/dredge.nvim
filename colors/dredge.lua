@@ -93,11 +93,11 @@ palettes.light = {
   warn = "#7a4400",
   green = "#317a46",
   teal = "#005751",
-  blue = "#296caa",
+  blue = "#334db0",
   magenta = "#940053",
 
   kw = "#5b5851",
-  fn = "#637200",
+  fn = "#127900",
   type = "#445200",
   builtin = "#004f85",
   param = "#872f00",
@@ -136,8 +136,8 @@ local roles = {
     link = "#6c71c4", todo = "#ad6396",
   },
   light = {
-    keyword = "#637200", op = "#8f3d5e", read = "#302e27", punct = "#7b786f",
-    lit = "#9d7200", desc = "#238682", remark = "#50686e", define = "#296caa",
+    keyword = "#127900", op = "#8f3d5e", read = "#302e27", punct = "#7b786f",
+    lit = "#b05a12", desc = "#00737e", remark = "#50686e", define = "#334db0",
     link = "#5a5fb4", todo = "#c52b75",
   },
 }
