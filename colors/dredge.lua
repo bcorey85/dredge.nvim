@@ -59,7 +59,7 @@ palettes.dark = {
   diff_change = "#1a2517",
   diff_text = "#21351e",
   diff_text_delete = "#412222",
-  search = "#5b4032",
+  search = "#4a3d14",
 
   term = {
     "#161616", "#d15e47", "#5daf6b", "#bda547", "#40a3e0", "#d97d94", "#51a49c", "#c0c0c0",
@@ -108,11 +108,11 @@ palettes.light = {
   removed = "#a03e43",
   changed = "#917031",
   diff_add = "#d6eacc",
-  diff_delete = "#f5d5d4",
+  diff_delete = "#f4dcd5",
   diff_change = "#d6eacc",
   diff_text = "#cae4c0",
-  diff_text_delete = "#f3c7c6",
-  search = "#a78773",
+  diff_text_delete = "#f2cec7",
+  search = "#ecd28a",
 
   -- Bright slots are deeper shades, as in solarized-osaka light: on a light
   -- ground a lighter "bright" colour reads fainter, not louder.
@@ -185,8 +185,8 @@ local groups = {
   Visual = { bg = c.bg_visual },
   VisualNOS = { link = "Visual" },
   Search = { fg = c.fg_bright, bg = c.search },
-  -- Matches and the current match are one amber family: a wash, then solid amber.
-  IncSearch = { fg = c.bg, bg = c.amber, bold = true },
+  -- Matches and the current match are one mustard family: a wash, then solid.
+  IncSearch = { fg = c.bg, bg = role.lit, bold = true },
   CurSearch = { link = "IncSearch" },
   Substitute = { fg = c.bg, bg = c.magenta },
   MatchParen = { fg = c.teal, bg = c.bg_visual, bold = true },
